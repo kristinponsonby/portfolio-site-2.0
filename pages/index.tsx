@@ -9,8 +9,7 @@ const Home: NextPage = () => {
         <title>Kristin Ponsonby | Full Stack Software Engineer</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      {/* Header */}
+      
       <Header />
 
       {/* Hero */}

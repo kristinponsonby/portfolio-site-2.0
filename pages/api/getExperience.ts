@@ -9,8 +9,7 @@ const query = groq`
         technologies[]->
     }
 `;
-
-
+ 
 type Data = {
     experiences: Experience[];
 };

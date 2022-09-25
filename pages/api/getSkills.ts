@@ -17,6 +17,6 @@ export default async function handler(
 ) {
     const skills: Skill[] = await sanityClient.fetch(query)
 
-    res.status(200).json({ skills })
+    res.status(200).json({ skills });
 
 } 

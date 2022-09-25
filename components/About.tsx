@@ -1,9 +1,13 @@
 import React from 'react';
 import { motion } from "framer-motion";
+import { PageInfo } from '../typings';
+import { urlFor } from '../sanity';
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo
+};
 
-function About({}: Props) {
+function About({pageInfo}: Props) {
   return (
     <motion.div
     initial={{
@@ -37,7 +41,7 @@ function About({}: Props) {
         viewport={{
             once: true,
         }}
-        src="https://cdn.sanity.io/images/ltuexkre/production/a766c574c295f2103c63c2dfdf675557c664d016-600x600.png"
+        src={urlFor(pageInfo?.profilePic).url()}
         className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover
         md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
         />
@@ -49,11 +53,11 @@ function About({}: Props) {
              about me
              </h4>
              <p className="text-base">
-             I'm Kristin. 🦋 I'm a full stack software engineer and fierce advocate for women in STEM. I completed the Flatiron School intensive 11 month bootcamp program in software engineering in 2021. 🏆 I am proficient in JavaScript, React/Redux, Ruby on Rails, SASS, and HTML/CSS. Additionally, I have substantial experience with AWS microservices including Lambda, Athena, Auroa, S3, Amplify, and other services as needed. Currently, I work as a software engineer in healthcare tech. My diverse professional background includes Web Development, UX/ UI Design, Real Estate, and Digital Marketing.
+                {pageInfo?.backgroundInformation}
              </p>
         </div>
     </motion.div>
   )
 }
 
-export default About
+export default About;

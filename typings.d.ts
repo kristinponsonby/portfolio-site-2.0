@@ -63,6 +63,6 @@
 
 export interface Social extends SanityBody {
     _type: "social";
-    _title: string;
+    title: string;
     url: string;
-}
+} 

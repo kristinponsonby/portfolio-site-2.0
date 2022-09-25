@@ -8,6 +8,15 @@ import Hero from '../components/Hero'
 import Projects from '../components/Projects'
 import Skills from '../components/Skills'
 import WorkExperience from '../components/WorkExperience'
+import { Experience, PageInfo, Project, Skill, Social } from "../typings";
+
+type Props = {
+  pageInfo: PageInfo;
+  experiences: Experience[];
+  skills: Skill[];
+  projects: Project[];
+  socials: Social[];
+}
 
 const Home: NextPage = () => {
   return (
@@ -60,4 +69,8 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Home;
+
+export const getStaticProps: GetStaticProps<Props>  = async () => {
+
+} 
